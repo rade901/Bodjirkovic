@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodjir šifre</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .table-responsive {
+            display: flex;
+            justify-content: center;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header img {
+            margin-right: 10px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Logo" width="200" height="100">
+        <h1 class="text-center">šifre</h1>
+    </div>
+    <input class="form-control mb-3" id="searchInput" type="text" placeholder="Pretraži">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Ident</th>
+                    <th scope="col">Naziv</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <th scope="row">00100</th>
+                    <td>Hamburger-Mesni pripravak</td>
+                </tr>
+                <tr>
+                    <th scope="row">00101</th>
+                    <td>Ćevap formiran -Mesni pripravak</td>
+                </tr>
+                <tr>
+                    <th scope="row">00102</th>
+                    <td>Šunkerica velika</td>
+                </tr>
+                <tr>
+                    <th scope="row">001020</th>
+                    <td>Šunkerica mala</td>
+                </tr>
+                <tr>
+                    <th scope="row">00103</th>
+                    <td>Ljetna Kobasica velika</td>
+                </tr>
+                <tr>
+                    <th scope="row">001030</th>
+                    <td>Ljetna Kobasica mala</td>
+                </tr>
+                <tr>
+                    <th scope="row">00104</th>
+                    <td>Tirolska Kobasica velika</td>
+                </tr>
+                <tr>
+                    <th scope="row">001040</th>
+                    <td>Tirolska Kobasica mala</td>
+                </tr>
+                <tr>
+                    <th scope="row">00106</th>
+                    <td>Posebna kobasica velika</td>
+                </tr>
+                <tr>
+                    <th scope="row">001060</th>
+                    <td>Posebna kobasica mala</td>
+                </tr>
+                <tr>
+                    <th scope="row">00107</th>
+                    <td>Goveđa salama</td>
+                </tr>
+                <tr>
+                    <th scope="row">001070</th>
+                    <td>Goveđa salama-vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00108</th>
+                    <td>Debreciner</td>
+                </tr>
+                <tr>
+                    <th scope="row">00109</th>
+                    <td>Kranjska kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">00110</th>
+                    <td>Lovačka kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">00111</th>
+                    <td>Roštilj kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">001111</th>
+                    <td>Goveđa roštilj kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">00112</th>
+                    <td>Hrenovka</td>
+                </tr>
+                <tr>
+                    <th scope="row">00113</th>
+                    <td>Goveđi Debreciner</td>
+                </tr>
+                <tr>
+                    <th scope="row">00114</th>
+                    <td>Domaća kobasica trajna</td>
+                </tr>
+                <tr>
+                    <th scope="row">001140</th>
+                    <td>Domaća kobasica trajna alinea</td>
+                </tr>
+                <tr>
+                    <th scope="row">00115</th>
+                    <td>Goveđa domaća kobasica trajna</td>
+                </tr>
+                <tr>
+                    <th scope="row">00116</th>
+                    <td>Čajna kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">001160</th>
+                    <td>Čajna kobasica mini</td>
+                </tr>
+                <tr>
+                    <th scope="row">0011601</th>
+                    <td>Čajna kobasica mini-vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00117</th>
+                    <td>Goveđa čajna kobasica trajna</td>
+                </tr>
+                <tr>
+                    <th scope="row">00118</th>
+                    <td>Kulen seka</td>
+                </tr>
+                <tr>
+                    <th scope="row">00119</th>
+                    <td>Krvavica domaća</td>
+                </tr>
+                <tr>
+                    <th scope="row">00120</th>
+                    <td>Švargl</td>
+                </tr>
+                <tr>
+                    <th scope="row">00121</th>
+                    <td>Suha slanina</td>
+                </tr>
+                <tr>
+                    <th scope="row">001211</th>
+                    <td>Suha slanina od crne slavonske svinje</td>
+                </tr>
+                <tr>
+                    <th scope="row">0012110</th>
+                    <td>Slanina crna slavonska-vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00124</th>
+                    <td>Dimljena svinjska rebra</td>
+                </tr>
+                <tr>
+                    <th scope="row">00126</th>
+                    <td>Dimljene svinske kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">00127</th>
+                    <td>Dimljena koljenica</td>
+                </tr>
+                <tr>
+                    <th scope="row">00128</th>
+                    <td>Suhi svinjski vrat-budjola</td>
+                </tr>
+                <tr>
+                    <th scope="row">00129</th>
+                    <td>Dimljeno svinjsko meso sa slaninom</td>
+                </tr>
+                <tr>
+                    <th scope="row">00130</th>
+                    <td>Dimljeno svinsko meso bez slanine</td>
+                </tr>
+                <tr>
+                    <th scope="row">00132</th>
+                    <td>Pečeno svinjsko meso</td>
+                </tr>
+                <tr>
+                    <th scope="row">001321</th>
+                    <td>Pečeno svinjsko meso-krto</td>
+                </tr>
+                <tr>
+                    <th scope="row">001322</th>
+                    <td>Pečeno svinjsko meso-od vrata</td>
+                </tr>
+                <tr>
+                    <th scope="row">00133</th>
+                    <td>Svinjska mast 5kg u kantici</td>
+                </tr>
+                <tr>
+                    <th scope="row">001330</th>
+                    <td>Svinjska mast</td>
+                </tr>
+                <tr>
+                    <th scope="row">00134</th>
+                    <td>Čvarci</td>
+                </tr>
+                <tr>
+                    <th scope="row">001340</th>
+                    <td>Čvarci u kutiji 200g</td>
+                </tr>
+                <tr>
+                    <th scope="row">001342</th>
+                    <td>Čvarci od crne slavonske svinje</td>
+                </tr>
+                <tr>
+                    <th scope="row">00135</th>
+                    <td>Delikates šunka</td>
+                </tr>
+                <tr>
+                    <th scope="row">001350</th>
+                    <td>Delikates šunka s papirom</td>
+                </tr>
+                <tr>
+                    <th scope="row">00136</th>
+                    <td>Pica šunka</td>
+                </tr>
+                <tr>
+                    <th scope="row">001360</th>
+                    <td>Pica šunka mala</td>
+                </tr>
+                <tr>
+                    <th scope="row">20002</th>
+                    <td>Svinjska jetra</td>
+                </tr>
+                <tr>
+                    <th scope="row">20003</th>
+                    <td>Svinjski bubrezi</td>
+                </tr>
+                <tr>
+                    <th scope="row">20004</th>
+                    <td>Mozak svinjski</td>
+                </tr>
+                <tr>
+                    <th scope="row">20006</th>
+                    <td>Svinjske nogice i repići</td>
+                </tr>
+                <tr>
+                    <th scope="row">20007</th>
+                    <td>Sviježa svinjska rebra</td>
+                </tr>
+                <tr>
+                    <th scope="row">20013</th>
+                    <td>Svinjetina bez kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">20014</th>
+                    <td>Svinjetina s kostima</td>
+                </tr>
+                <tr>
+                    <th scope="row">20017</th>
+                    <td>Mljevena svinjetina</td>
+                </tr>
+                <tr>
+                    <th scope="row">200170</th>
+                    <td>Mljeveno meso za kobasice</td>
+                </tr>
+                <tr>
+                    <th scope="row">20020</th>
+                    <td>Sviježe svinjske kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">20021</th>
+                    <td>Svinjska polovica sa glavom</td>
+                </tr>
+                <tr>
+                    <th scope="row">20023</th>
+                    <td>Koljenice svinjske svježe</td>
+                </tr>
+                <tr>
+                    <th scope="row">20024</th>
+                    <td>Prasetina sa glavom i iznutricama</td>
+                </tr>
+                <tr>
+                    <th scope="row">200242</th>
+                    <td>Rolovana prasetina</td>
+                </tr>
+                <tr>
+                    <th scope="row">20027</th>
+                    <td>Svinjetina bk-laks kare pečenica</td>
+                </tr>
+                <tr>
+                    <th scope="row">20028</th>
+                    <td>Carsko meso sa rebrima</td>
+                </tr>
+                <tr>
+                    <th scope="row">20029</th>
+                    <td>Carsko meso bez kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">200291</th>
+                    <td>Rolovano carsko bez kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">20033</th>
+                    <td>Zamrznuta jetra</td>
+                </tr>
+                <tr>
+                    <th scope="row">20034</th>
+                    <td>Zamrznuta pluća</td>
+                </tr>
+                <tr>
+                    <th scope="row">20040</th>
+                    <td>Svinjska maramica</td>
+                </tr>
+                <tr>
+                    <th scope="row">20042</th>
+                    <td>Salo svinjsko</td>
+                </tr>
+                <tr>
+                    <th scope="row">20050</th>
+                    <td>Plećka sviježa za sušenje sa slaninom</td>
+                </tr>
+                <tr>
+                    <th scope="row">20051</th>
+                    <td>Šunka sviježa za sušenje bez slanine</td>
+                </tr>
+                <tr>
+                    <th scope="row">20052</th>
+                    <td>Šunka sviježa za sušenje sa slaninom</td>
+                </tr>
+                <tr>
+                    <th scope="row">20055</th>
+                    <td>Plećka sviježa za sušenje bez slanine</td>
+                </tr>
+                <tr>
+                    <th scope="row">20056</th>
+                    <td>Meso iz paca svinjetina</td>
+                </tr>
+                <tr>
+                    <th scope="row">20057</th>
+                    <td>Svinjska sviježa grill rebra iz paca</td>
+                </tr>
+                <tr>
+                    <th scope="row">20058</th>
+                    <td>SRažnjić</td>
+                </tr>
+                <tr>
+                    <th scope="row">20059</th>
+                    <td>Roštilj specijal</td>
+                </tr>
+                <tr>
+                    <th scope="row">20060</th>
+                    <td>Grill rebra ravna</td>
+                </tr>
+                <tr>
+                    <th scope="row">20062</th>
+                    <td>Svinjski obrazi</td>
+                </tr>
+                <tr>
+                    <th scope="row">20068</th>
+                    <td>Mljeveno mješano meso  (50SV-50JUN)</td>
+                </tr>
+                <tr>
+                    <th scope="row">20069</th>
+                    <td>Mljeveno mješano meso (70SV-30JUN)</td>
+                </tr>
+                <tr>
+                    <th scope="row">20070</th>
+                    <td>Svinjski file (lungić cijeli)</td>
+                </tr>
+                <tr>
+                    <th scope="row">20072</th>
+                    <td>Carsko meso bez kosti-Marinirano</td>
+                </tr>
+                <tr>
+                    <th scope="row">20090</th>
+                    <td>Vrat bez kosti-Marinirano</td>
+                </tr>
+                <tr>
+                    <th scope="row">21000</th>
+                    <td>Juneća jetra</td>
+                </tr>
+                <tr>
+                    <th scope="row">21001</th>
+                    <td>Juneća pluća</td>
+                </tr>
+                <tr>
+                    <th scope="row">21003</th>
+                    <td>Junetina bez kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">21004</th>
+                    <td>Junetina s kostima</td>
+                </tr>
+                <tr>
+                    <th scope="row">21005</th>
+                    <td>Juneći biftek-(file,lungić ili pisana pečenica)</td>
+                </tr>
+                <tr>
+                    <th scope="row">21008</th>
+                    <td>Mesnate juneće kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">21009</th>
+                    <td>Juneće šuplje kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">21014</th>
+                    <td>Juneći jezik</td>
+                </tr>
+                <tr>
+                    <th scope="row">21015</th>
+                    <td>Juneće srce</td>
+                </tr>
+                <tr>
+                    <th scope="row">21023</th>
+                    <td>Juneći bjeli bubreg</td>
+                </tr>
+                <tr>
+                    <th scope="row">21026</th>
+                    <td>Juneći rep</td>
+                </tr>
+                <tr>
+                    <th scope="row">21044</th>
+                    <td>Junetina bez kosti-Ramstek</td>
+                </tr>
+                <tr>
+                    <th scope="row">210441</th>
+                    <td>Junetina bez kosti-Ramstek neobradjeni</td>
+                </tr>
+                <tr>
+                    <th scope="row">21052</th>
+                    <td>Juneća žila</td>
+                </tr>
+                <tr>
+                    <th scope="row">21055</th>
+                    <td>Govedina-Mesni pripravak ćevapčići</td>
+                </tr>
+                <tr>
+                    <th scope="row">210555</th>
+                    <td>Goveđi hamburger-Mesni pripravak</td>
+                </tr>
+                <tr>
+                    <th scope="row">21056</th>
+                    <td>Juneći bubrezi</td>
+                </tr>
+                <tr>
+                    <th scope="row">002255</th>
+                    <td>Suha bijela slanina-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00228</th>
+                    <td>Češnjovka</td>
+                </tr>
+                <tr>
+                    <th scope="row">002280</th>
+                    <td>Češnjovka vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00229</th>
+                    <td>Dimljeni svinjski but sa kostima</td>
+                </tr>
+                <tr>
+                    <th scope="row">00230</th>
+                    <td>Dimljena plećka sa kostima</td>
+                </tr>
+                <tr>
+                    <th scope="row">00231</th>
+                    <td>Alpska kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">00233</th>
+                    <td>Pljeskavica sa sirom-Mesni pripravak 125g</td>
+                </tr>
+                <tr>
+                    <th scope="row">002333</th>
+                    <td>Goveđa pljeskavica sa sirom-Mesni pripravak 125g</td>
+                </tr>
+                <tr>
+                    <th scope="row">00234</th>
+                    <td>Domaća kobasica trajna-Mini</td>
+                </tr>
+                <tr>
+                    <th scope="row">002341</th>
+                    <td>Domaća kobasica trajna mini-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00236</th>
+                    <td>Suha slanina-za grah(pasulj)</td>
+                </tr>
+                <tr>
+                    <th scope="row">00237</th>
+                    <td>Domaća kobasica II kategorija</td>
+                </tr>
+                <tr>
+                    <th scope="row">00238</th>
+                    <td>Dimljene svinjske nogice i repići</td>
+                </tr>
+                <tr>
+                    <th scope="row">00239</th>
+                    <td>Domaća salama</td>
+                </tr>
+                <tr>
+                    <th scope="row">002391</th>
+                    <td>Domaća salama goveđa</td>
+                </tr>
+                <tr>
+                    <th scope="row">00240</th>
+                    <td>Domaća goveđa pljeskavica-Mesni pripravak</td>
+                </tr>
+                <tr>
+                    <th scope="row">002400</th>
+                    <td>Domaća goveđa pljeskavica-Mesni pripravak hamburger</td>
+                </tr>
+                <tr>
+                    <th scope="row">00243</th>
+                    <td>Pljeskavica ljuta-Mesni pripravak 125g</td>
+                </tr>
+                <tr>
+                    <th scope="row">002433</th>
+                    <td>Goveđa pljeskavica ljuta-Mesni pripravak 125g</td>
+                </tr>
+                <tr>
+                    <th scope="row">00244</th>
+                    <td>Smjesa za ćevape-Mješano usitnjeno meso</td>
+                </tr>
+                <tr>
+                    <th scope="row">00245</th>
+                    <td>Jeger</td>
+                </tr>
+                <tr>
+                    <th scope="row">00246</th>
+                    <td>Krvavice</td>
+                </tr>
+                <tr>
+                    <th scope="row">002530</th>
+                    <td>Goveđa domaća kobasica mini</td>
+                </tr>
+                <tr>
+                    <th scope="row">002531</th>
+                    <td>Goveđa domaća kobasica mini-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00254</th>
+                    <td>Domaća kobasica trajna od crne slavonske svinje</td>
+                </tr>
+                <tr>
+                    <th scope="row">002540</th>
+                    <td>Domaća kobasica trajna od crne slavonske svinje-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00256</th>
+                    <td>goveđa kobasica tartuf</td>
+                </tr>
+                <tr>
+                    <th scope="row">002560</th>
+                    <td>Goveđa domaća kobasica tartuf-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00258</th>
+                    <td>Pikant namaz od čvaraka i masti cca 200g</td>
+                </tr>
+                <tr>
+                    <th scope="row">002580</th>
+                    <td>Pikant namaz od čvaraka i masti cca 150g</td>
+                </tr>
+                <tr>
+                    <th scope="row">002590</th>
+                    <td>Goveđi burger-Mesni pripravak 150g</td>
+                </tr>
+                <tr>
+                    <th scope="row">00260</th>
+                    <td>Suha goveđa slanina</td>
+                </tr>
+                <tr>
+                    <th scope="row">002600</th>
+                    <td>Suha goveđa slanina-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00261</th>
+                    <td>Dimljene goveđe kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">00271</th>
+                    <td>Domaća salama pikant</td>
+                </tr>
+                <tr>
+                    <th scope="row">002710</th>
+                    <td>Domaća salama pikant-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00272</th>
+                    <td>Domaća salama miks</td>
+                </tr>
+                <tr>
+                    <th scope="row">002720</th>
+                    <td>Domaća salama miks-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">002730</th>
+                    <td>Lovačka kobasica interšpar</td>
+                </tr>
+                <tr>
+                    <th scope="row">00275</th>
+                    <td>Teleći ćevap-Mesni pripravak</td>
+                </tr>
+                <tr>
+                    <th scope="row">00276</th>
+                    <td>Goveđa čajna kobasica trajna</td>
+                </tr>
+                <tr>
+                    <th scope="row">00277</th>
+                    <td>Delikates meso u ovitku-Goveđe</td>
+                </tr>
+                <tr>
+                    <th scope="row">00280</th>
+                    <td>Dimljena bijela slanina vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00281</th>
+                    <td>Bakina pečenica</td>
+                </tr>
+                <tr>
+                    <th scope="row">002810</th>
+                    <td>Bakina pečenica-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00282</th>
+                    <td>Slavonska rola</td>
+                </tr>
+                <tr>
+                    <th scope="row">002820</th>
+                    <td>Slavonska rola-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00283</th>
+                    <td>Pljeskavica sa lukom-Mesni pripravak</td>
+                </tr>
+                <tr>
+                    <th scope="row">00284</th>
+                    <td>Mesni uštipak-Mesni pripravak</td>
+                </tr>
+                <tr>
+                    <th scope="row">002841</th>
+                    <td>Goveđi mesni uštipak-Mesni pripravak</td>
+                </tr>
+                <tr>
+                    <th scope="row">00296</th>
+                    <td>Šmek sulc klasični</td>
+                </tr>
+                <tr>
+                    <th scope="row">00297</th>
+                    <td>Šmek sulc dimljeni</td>
+                </tr>
+                <tr>
+                    <th scope="row">20000</th>
+                    <td>Svinjski jezik</td>
+                </tr>
+                <tr>
+                    <th scope="row">20001</th>
+                    <td>Svinjsko srce</td>
+                </tr>
+                <tr>
+                    <th scope="row">00139</th>
+                    <td>Rolovana slanina sa sirom</td>
+                </tr>
+                <tr>
+                    <th scope="row">00140</th>
+                    <td>Rolovana slanina sa paprikom</td>
+                </tr>
+                <tr>
+                    <th scope="row">00141</th>
+                    <td>Bijela pljeskavica sa srim-Mesni pripravak</td>
+                </tr>
+                <tr>
+                    <th scope="row">00142</th>
+                    <td>Safalada</td>
+                </tr>
+                <tr>
+                    <th scope="row">00145</th>
+                    <td>Kuhana juneća fileka</td>
+                </tr>
+                <tr>
+                    <th scope="row">00146</th>
+                    <td>Čvarci mljeveni</td>
+                </tr>
+                <tr>
+                    <th scope="row">00148</th>
+                    <td>Slaninska kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">001480</th>
+                    <td>Slaninska kobasica-Boso</td>
+                </tr>
+                <tr>
+                    <th scope="row">00149</th>
+                    <td>Sviježa kobasica za pečenje(prodimljena)</td>
+                </tr>
+                <tr>
+                    <th scope="row">001490</th>
+                    <td>Sviježa kobasica za pečenje</td>
+                </tr>
+                <tr>
+                    <th scope="row">00150</th>
+                    <td>Suha šunka bez kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">00151</th>
+                    <td>Delikates meso u ovitku-Svinjsko</td>
+                </tr>
+                <tr>
+                    <th scope="row">00152</th>
+                    <td>Delikates meso u ovitku-Goveđe</td>
+                </tr>
+                <tr>
+                    <th scope="row">00154</th>
+                    <td>Kobasica domaća prodimljena</td>
+                </tr>
+                <tr>
+                    <th scope="row">00157</th>
+                    <td>Milanska salama</td>
+                </tr>
+                <tr>
+                    <th scope="row">00159</th>
+                    <td>Dimljena mesnata svinjska rebra</td>
+                </tr>
+                <tr>
+                    <th scope="row">00160</th>
+                    <td>Suho goveđe meso</td>
+                </tr>
+                <tr>
+                    <th scope="row">0016000</th>
+                    <td>Suho goveđe meso vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00174</th>
+                    <td>Juneća fileka</td>
+                </tr>
+                <tr>
+                    <th scope="row">00177</th>
+                    <td>Goveđi jezik dimljeni</td>
+                </tr>
+                <tr>
+                    <th scope="row">00179</th>
+                    <td>Svinjska mast 1kg u kantici</td>
+                </tr>
+                <tr>
+                    <th scope="row">001790</th>
+                    <td>Svinjska mast rinfuza</td>
+                </tr>
+                <tr>
+                    <th scope="row">001792</th>
+                    <td>Svinjska mast u pvc foliji za ugostitelje</td>
+                </tr>
+                <tr>
+                    <th scope="row">001793</th>
+                    <td>Svinjska mast od crne slavonske svinje 1kg u kantici</td>
+                </tr>
+                <tr>
+                    <th scope="row">00180</th>
+                    <td>Sviježa istarska kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">001800</th>
+                    <td>Sviježa istarska kobasica vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00181</th>
+                    <td>Istarska kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">001810</th>
+                    <td>Istarska kobasica goveđa</td>
+                </tr>
+                <tr>
+                    <th scope="row">001811</th>
+                    <td>Istarska kobasica goveđa-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00185</th>
+                    <td>Kranjska kobasica sa sirom</td>
+                </tr>
+                <tr>
+                    <th scope="row">00186</th>
+                    <td>Dimljene mesnate goveđe kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">00188</th>
+                    <td>Pašteta u crijevu</td>
+                </tr>
+                <tr>
+                    <th scope="row">00190</th>
+                    <td>Kulen</td>
+                </tr>
+                <tr>
+                    <th scope="row">001901</th>
+                    <td>Slavonski ravni kulen</td>
+                </tr>
+                <tr>
+                    <th scope="row">00193</th>
+                    <td>Narodna kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">001930</th>
+                    <td>Domaća narodna kobasica</td>
+                </tr>
+                <tr>
+                    <th scope="row">00197</th>
+                    <td>Čvarci zaliveni sa masti</td>
+                </tr>
+                <tr>
+                    <th scope="row">00198</th>
+                    <td>Krakovska šunka</td>
+                </tr>
+                <tr>
+                    <th scope="row">00203</th>
+                    <td>Pečeno meso sa slaninom</td>
+                </tr>
+                <tr>
+                    <th scope="row">00204</th>
+                    <td>Mljeveni čvarci u teglici cca 350g</td>
+                </tr>
+                <tr>
+                    <th scope="row">00205</th>
+                    <td>Pečeno goveđe meso</td>
+                </tr>
+                <tr>
+                    <th scope="row">002050</th>
+                    <td>Pečeno goveđe meso-Vakum</td>
+                </tr>
+                <tr>
+                    <th scope="row">00206</th>
+                    <td>Košara mesnih proizvoda</td>
+                </tr>
+                <tr>
+                    <th scope="row">002061</th>
+                    <td>Košara mesnih proizvoda I</td>
+                </tr>
+                <tr>
+                    <th scope="row">002062</th>
+                    <td>Košara mesnih proizvoda II</td>
+                </tr>
+                <tr>
+                    <th scope="row">002063</th>
+                    <td>Košara mesnih proizvoda III</td>
+                </tr>
+                <tr>
+                    <th scope="row">002064</th>
+                    <td>Košara mesnih proizvoda IV</td>
+                </tr>
+                <tr>
+                    <th scope="row">002071</th>
+                    <td>Poklon bon</td>
+                </tr>
+                <tr>
+                    <th scope="row">00211</th>
+                    <td>Domaća kobasica zalivena sa masti cca 350g</td>
+                </tr>
+                <tr>
+                    <th scope="row">00221</th>
+                    <td>Rolovano svinjsko meso sa slaninom</td>
+                </tr>
+                <tr>
+                    <th scope="row">00222</th>
+                    <td>Rolovano svinjsko meso bez slanine</td>
+                </tr>
+                <tr>
+                    <th scope="row">00223</th>
+                    <td>Dimljene svinjske glave</td>
+                </tr>
+                <tr>
+                    <th scope="row">00225</th>
+                    <td>Suha bijela slanina</td>
+                </tr>
+                <tr>
+                    <th scope="row">002250</th>
+                    <td>Suha bijela slanina od crne svinje</td>
+                </tr>
+                <tr>
+                    <th scope="row">21059</th>
+                    <td>Juneći T-bon steak</td>
+                </tr>
+                <tr>
+                    <th scope="row">21060</th>
+                    <td>Meso iz paca govedina</td>
+                </tr>
+                <tr>
+                    <th scope="row">21070</th>
+                    <td>Juneći T-bon steak II</td>
+                </tr>
+                <tr>
+                    <th scope="row">21072</th>
+                    <td>Šiš ćevap-Mesni pripravak</td>
+                </tr>
+                <tr>
+                    <th scope="row">21075</th>
+                    <td>Tomahawk</td>
+                </tr>
+                <tr>
+                    <th scope="row">21076</th>
+                    <td>Tomahawk kratki</td>
+                </tr>
+                <tr>
+                    <th scope="row">21084</th>
+                    <td>Tomahawk II</td>
+                </tr>
+                <tr>
+                    <th scope="row">21087</th>
+                    <td>Goveđi šiš ćevap</td>
+                </tr>
+                <tr>
+                    <th scope="row">22001</th>
+                    <td>Janjetina</td>
+                </tr>
+                <tr>
+                    <th scope="row">22003</th>
+                    <td>Janjeća glava</td>
+                </tr>
+                <tr>
+                    <th scope="row">22004</th>
+                    <td>Janjeće iznutrice</td>
+                </tr>
+                <tr>
+                    <th scope="row">24905</th>
+                    <td>Svinjska crijeva vlastita proizvodnja</td>
+                </tr>
+                <tr>
+                    <th scope="row">24954</th>
+                    <td>Sv.Crijeva za krvavicu-vlastita 8*0,40= 3,20m</td>
+                </tr>
+                <tr>
+                    <th scope="row">24955</th>
+                    <td>Sv.Crijeva za kobasice tanka-vlastita 10m => 24923</td>
+                </tr>
+                <tr>
+                    <th scope="row">24956</th>
+                    <td>Sv.Crijeva kulen seka-vlastita 3* 0,4 = 1,20 => 24902</td>
+                </tr>
+                <tr>
+                    <th scope="row">24957</th>
+                    <td>Sv.Crijeva kulen-vlastita-slijepo cirijevo</td>
+                </tr>
+                <tr>
+                    <th scope="row">24958</th>
+                    <td>Sv.Crijeva švargl-vlastita-stomak</td>
+                </tr>
+                <tr>
+                    <th scope="row">24974</th>
+                    <td>Sv.Crijeva kobasice tanka-vlastita 1m</td>
+                </tr>
+                <tr>
+                    <th scope="row">24975</th>
+                    <td>Sv.Crijeva kulen(velika)</td>
+                </tr>
+                <tr>
+                    <th scope="row">24976</th>
+                    <td>Sv.Crijeva švargl(velika)</td>
+                </tr>
+                <tr>
+                    <th scope="row">24977</th>
+                    <td>Jun.crijeva za budjolu i pečenicu</td>
+                </tr>
+                <tr>
+                    <th scope="row">25000</th>
+                    <td>Teletina bez kosti</td>
+                </tr>
+                <tr>
+                    <th scope="row">25001</th>
+                    <td>Teletina s kostima</td>
+                </tr>
+                <tr>
+                    <th scope="row">25003</th>
+                    <td>Teleći T-bon-rostbeef(slanine i leđa) i biftekom</td>
+                </tr>
+                <tr>
+                    <th scope="row">25007</th>
+                    <td>Teleći biftek-(file, lungić ili pisana pečenica)</td>
+                </tr>
+                <tr>
+                    <th scope="row">25008</th>
+                    <td>Teleća glava</td>
+                </tr>
+                <tr>
+                    <th scope="row">25009</th>
+                    <td>Teleća jetra(iznutrica)</td>
+                </tr>
+                <tr>
+                    <th scope="row">6000</th>
+                    <td>Oval-1 prerađevine od svinjetine</td>
+                </tr>
+                <tr>
+                    <th scope="row">6001</th>
+                    <td>Oval-2 prerađevine juneće</td>
+                </tr>
+                <tr>
+                    <th scope="row">6002</th>
+                    <td>Oval-3 prerađevine od svinjetine</td>
+                </tr>
+                <tr>
+                    <th scope="row">6005</th>
+                    <td>Oval-6 prerađevine od svinjetine</td>
+                </tr>
+                <tr>
+                    <th scope="row">6006</th>
+                    <td>Oval-7 prerađevine od svinjetine</td>
+                </tr>
+
+                <!-- More rows... -->
+            </tbody>
+        </table>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">© 2025 Rade Jasenovčanin.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            var input = this.value.toLowerCase();
+            var rows = document.querySelectorAll('#tableBody tr');
+            rows.forEach(function(row) {
+                var cells = row.querySelectorAll('td, th');
+                var match = false;
+                cells.forEach(function(cell) {
+                    if (cell.textContent.toLowerCase().indexOf(input) > -1) {
+                        match = true;
+                    }
+                });
+                row.style.display = match ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
